@@ -7,7 +7,7 @@
 **1. All the companies whose name match 'Babelgum'. Retrieve only their `name` field.**
 
 <!-- Your Query Goes Here -->
-querie: {name: "Babelgum}
+querie: {name: "Babelgum"}
 project: {name:1, _id:0}
 
 <br>
@@ -34,7 +34,7 @@ project: {name:1, founded_year:1, _id:0}
 <!-- Your Query Goes Here -->
 queries: {
   $and: [
-    { 'ipo.valuation_amount': { $gte: 10000000 } },
+    { 'ipo.valuation_amount': { $gte: 100000000 } },
     { founded_year: { $lt: 2010 } }
   ]
 }
@@ -103,7 +103,7 @@ sort: {"acquisition.price_amount": -1}
 **2. Order the companies by their `founded year`, retrieving only their `name` and `founded year`.**
 
 <!-- Your Query Goes Here -->
-queries: 'founded_year': { '$ne': null }
+queries: {'founded_year': { '$ne': null }}
 project: {founded_year:1, name:1, _id:0}
 sort: {founded_year:1}
 
